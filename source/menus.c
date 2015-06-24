@@ -153,7 +153,10 @@ s32 menu_cb_run (s32 idx, void *param) {
 	   problems with using sockets either */
 	soc_exit();
 	printf("[+] Running ARM9 payload\n");	
+
+    set_screen_mode(GSP_BGR8_OES, GSP_BGR8_OES);
 	fail_stage = firm_reboot();
+    consoleInit(GFX_BOTTOM, NULL);
 
 	char *msg;
 	switch (fail_stage) {
