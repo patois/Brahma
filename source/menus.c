@@ -154,9 +154,9 @@ s32 menu_cb_run (s32 idx, void *param) {
 	soc_exit();
 	printf("[+] Running ARM9 payload\n");	
 
-    set_screen_mode(GSP_BGR8_OES, GSP_BGR8_OES);
+	set_screen_mode(GSP_BGR8_OES, GSP_BGR8_OES);
 	fail_stage = firm_reboot();
-    consoleInit(GFX_BOTTOM, NULL);
+	consoleInit(GFX_BOTTOM, NULL);
 
 	char *msg;
 	switch (fail_stage) {

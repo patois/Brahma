@@ -43,9 +43,9 @@ void interact_with_user (void) {
 s32 quick_boot_firm (s32 load_from_disk) {
 	if (load_from_disk)
 		load_arm9_payload("/arm9payload.bin");
-    set_screen_mode(GSP_BGR8_OES, GSP_BGR8_OES);
+	set_screen_mode(GSP_BGR8_OES, GSP_BGR8_OES);
 	firm_reboot();	
-    consoleInit(GFX_BOTTOM, NULL);
+	consoleInit(GFX_BOTTOM, NULL);
 }
 
 s32 main (void) {

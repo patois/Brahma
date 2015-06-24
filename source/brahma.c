@@ -453,8 +453,8 @@ s32 firm_reboot (void) {
 
 /* Changes framebuffer mode */
 void set_screen_mode(gfxScreen_t screen_top, gfxScreen_t screen_bottom) {
-    consoleClear();
-    gfxSetScreenFormat(GFX_TOP, screen_top);
-    gfxSetScreenFormat(GFX_BOTTOM, screen_bottom);
-    gfxSwapBuffers();
+	consoleClear();
+	gfxSetScreenFormat(GFX_TOP, screen_top);
+	gfxSetScreenFormat(GFX_BOTTOM, screen_bottom);
+	gfxSwapBuffers();
 }
