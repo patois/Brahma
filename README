@@ -69,7 +69,7 @@ Brahma - Privilege elevation exploit for the Nintendo 3DS
   There is also a port of Decrypt9 by archshift which can be loaded using
   bootstrap or Brahma (use 'make' to build the project, then use one of the
   methods supported by Brahma to load the Decrypt9 payload). Decrypt9 can be
-  downloaded from https://github.com/archshift/Decrypt9/tree/bootstrap
+  downloaded from https://github.com/archshift/Decrypt9
 
   Developers:
   -----------
