@@ -324,6 +324,7 @@ void exploit_arm9_race_condition (void) {
 						  g_expdata.va_patch_hook2);
 
 		CleanEntireDataCache();
+		dsb();
 		InvalidateEntireInstructionCache();
 
 		// trigger ARM9 code execution through "firmlaunch"
