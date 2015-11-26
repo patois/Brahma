@@ -1,0 +1,24 @@
+Example programs for use with Brahma
+====================================
+
+This folder contains projects and example source code for
+ARM9 payload binaries (running at ARM9 SVC mode) which can be
+built using devkitARM. The resulting payload files can be loaded
+using one of the methods supported by the Brahma privilege
+elevation exploit for the Nintendo 3DS system.
+
+How to use:
+- Download Brahma (https://github.com/patois/Brahma/releases)
+- Run brahma.3dsx using homebrew launcher
+- Use one of the methods supported by Brahma in order to load
+  the payload
+
+How to build:
+- Download and install devkitARM (http://devkitpro.org/wiki/Getting_Started)
+- Open a shell and run 'make' in order to build the payload binary
+
+Credits:
+- To archshift (and originally Normmatt) who provided the project
+  infrastructure along with Decrypt9/bootstrap that this project is based on.
+- 3DBrew
+- #3dsdev
