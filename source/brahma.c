@@ -17,7 +17,7 @@ static u32 g_ext_arm9_size = 0;
 static s32 g_ext_arm9_loaded = 0;
 static struct exploit_data g_expdata;
 static struct arm11_shared_data g_arm11shared;
-GSP_FramebufferInfo topFramebufferInfo, bottomFramebufferInfo;
+GSPGPU_FramebufferInfo topFramebufferInfo, bottomFramebufferInfo;
 
 /* should be the very first call. allocates heap buffer
    for ARM9 payload */
@@ -55,7 +55,7 @@ s32 get_exploit_data (struct exploit_data *data) {
 		return result;
 
 	fversion = osGetFirmVersion();
-	APT_CheckNew3DS(NULL, &isN3DS);
+	APT_CheckNew3DS(&isN3DS);
 	sysmodel = isN3DS ? SYS_MODEL_NEW_3DS : SYS_MODEL_OLD_3DS;
 
 	/* copy platform and firmware dependent data */
