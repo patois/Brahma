@@ -42,20 +42,14 @@ void interact_with_user (void) {
 
 s32 quick_boot_firm (s32 load_from_disk) {
 	if (load_from_disk)
-		load_arm9_payload("/arm9payload.bin");
+		load_arm9_payload_offset("/arm9payload.bin", 0, 0);
 	firm_reboot();	
 }
 
 s32 main (void) {
 	// Initialize services
-	srvInit();
-	aptInit();
-	hidInit(NULL);
 	gfxInitDefault();
-	fsInit();
-	sdmcInit();
-	hbInit();
-	qtmInit();
+	gfxSwapBuffers(); 
 	
 	consoleInit(GFX_BOTTOM, NULL);
 	if (brahma_init()) {
@@ -82,13 +76,7 @@ s32 main (void) {
 		wait_any_key();
 	}
 
-	hbExit();
-	sdmcExit();
-	fsExit();
 	gfxExit();
-	hidExit();
-	aptExit();
-	srvExit();
 	// Return to hbmenu
 	return 0;
 }

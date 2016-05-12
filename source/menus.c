@@ -64,7 +64,7 @@ s32 print_main_menu (s32 idx, struct menu_t *menu) {
 	s32 newidx = 0;
 	consoleClear();
 
-	printf("\n* BRAHMA *\n\n\n");
+	printf("\n* BRAHMA II *\n\n\n");
 	printf("===========================\n");
 	newidx = print_menu(idx, menu);
 	printf("===========================\n\n");	
@@ -105,7 +105,7 @@ s32 menu_cb_load(s32 idx, void *param) {
 	if (param) {
 		if (get_filename(*(u32 *)param, &filename, sizeof(filename))) {
 			printf("[+] Loading %s\n", filename);
-			result = load_arm9_payload(filename);
+			result = load_arm9_payload_offset(filename, 0, 0);
 		}
 	}
 	return result;
