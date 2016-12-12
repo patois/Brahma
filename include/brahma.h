@@ -15,6 +15,7 @@ void exploit_arm9_race_condition (void);
 void repair_svcCreateThread (void);
 s32 get_exploit_data (struct exploit_data *data);
 s32 firm_reboot ();
+void set_screen_mode(gfxScreen_t screen_top, gfxScreen_t screen_bottom);
 
 #define BRAHMA_NETWORK_PORT 80
 
